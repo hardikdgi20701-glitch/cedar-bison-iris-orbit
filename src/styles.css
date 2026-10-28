@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --color-bg: #fff;
+  --color-surface: #f8f9fa;
+  --color-surface-2: #f1f3f4;
+  --color-fg: #202124;
+  --color-muted: #5f6368;
+  --color-subtle: #80868b;
+  --color-border: #dadce0;
+  --color-border-strong: #bdc1c6;
+  --color-primary: #1a73e8;
+  --color-primary-hover: #174ea6;
+  --color-primary-fg: #fff;
+  --color-primary-soft: #e8f0fe;
+  --color-up: #137333;
+  --color-up-soft: #e6f4ea;
+  --color-down: #c5221f;
+  --color-down-soft: #fce8e6;
+  --color-warn: #b06000;
+  --color-warn-soft: #fef7e0;
+  --color-chip: #e8eaed;
+  --color-rail: #fff;
+  --color-bull: #137333;
+  --color-bear: #c5221f;
+  --color-accent: #1a73e8;
+  --color-accent-fg: #fff;
+  --color-nse: #3b1a78;
+  --color-nse-mid: #5b2ca0;
+  --color-nse-bar: #4e1d95;
+  --color-nse-deep: #12082a;
+  --color-nse-wash: #f4f6fb;
+  --color-nse-card: #fff;
+  --color-nse-fg: #1a1a1a;
+  --color-nse-muted: #5a5a5a;
+  --color-nse-mist: #d7ccec;
+  --color-nse-ink: #fff;
+  --color-nse-line: #e6e3ee;
+  --color-nse-accent: #f36c21;
+  --color-nse-tick: #1a1a2e;
+  --color-nse-gold: #e8a317;
+  --color-nse-pink: #fdecef;
+  --color-nse-soft: #f3eefc;
+  --color-nse-green-soft: #eaf7ee;
+  --color-nse-blue: #1b3a8c;
+  --color-nse-chart: #7ec8e3;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html,
+  body,
+  #app {
+    background: var(--color-bg);
+    min-height: 100%;
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  input,
+  select,
+  textarea {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+}
+
+.dark {
+  --color-bg: #131314;
+  --color-surface: #1e1f20;
+  --color-surface-2: #2d2e30;
+  --color-fg: #e8eaed;
+  --color-muted: #9aa0a6;
+  --color-subtle: #80868b;
+  --color-border: #3c4043;
+  --color-border-strong: #5f6368;
+  --color-primary: #8ab4f8;
+  --color-primary-hover: #aecbfa;
+  --color-primary-fg: #202124;
+  --color-primary-soft: #1a2b45;
+  --color-up: #81c995;
+  --color-up-soft: #0d2818;
+  --color-down: #f28b82;
+  --color-down-soft: #3c1a18;
+  --color-warn: #fdd663;
+  --color-warn-soft: #3c3000;
+  --color-chip: #2d2e30;
+  --color-rail: #1e1f20;
+  --color-bull: #81c995;
+  --color-bear: #f28b82;
+  --color-accent: #8ab4f8;
+  --color-accent-fg: #202124;
+  --color-nse-wash: #0f1720;
+  --color-nse-card: #15202b;
+  --color-nse-fg: #e8eaed;
+  --color-nse-muted: #9aa0a6;
+  --color-nse-line: #3c4043;
+  --color-nse-tick: #0b1220;
+}
+
+.nse-desk {
+  color-scheme: light;
+  --color-nse: #3b1a78;
+  --color-nse-mid: #5b2ca0;
+  --color-nse-bar: #4e1d95;
+  --color-nse-deep: #12082a;
+  --color-nse-wash: #f4f6fb;
+  --color-nse-card: #fff;
+  --color-nse-fg: #1a1a1a;
+  --color-nse-muted: #5a5a5a;
+  --color-nse-mist: #d7ccec;
+  --color-nse-ink: #fff;
+  --color-nse-line: #e6e3ee;
+  --color-nse-accent: #f36c21;
+  --color-nse-tick: #1a1a2e;
+  --color-nse-gold: #e8a317;
+  --color-nse-pink: #fdecef;
+  --color-nse-soft: #f3eefc;
+  --color-nse-green-soft: #eaf7ee;
+  --color-nse-blue: #1b3a8c;
+  --color-nse-chart: #7ec8e3;
+  --color-up: #137333;
+  --color-down: #c5221f;
+}
+
+.nse-contrast {
+  --color-nse: #001a80;
+  --color-nse-wash: #000;
+  --color-nse-card: #111;
+  --color-nse-fg: #fff;
+  --color-nse-muted: #ddd;
+  --color-nse-line: #555;
+  --color-nse-ink: #fff;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes lesson-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lesson-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lesson-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes lesson-candle {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lesson-dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes lesson-pulse {
+  50% {
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 40%, transparent);
+  }
+}
+
+.lesson-anim {
+  animation: lesson-in 0.7s ease both;
+}
+
+.lesson-draw {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: lesson-draw 1.5s ease forwards;
+}
+
+.lesson-bar {
+  transform-origin: left center;
+  animation: lesson-bar 0.8s ease both;
+}
+
+.lesson-candle {
+  animation: lesson-candle 0.55s ease both;
+}
+
+.lesson-arrow {
+  stroke-dasharray: 4 5;
+  animation: lesson-dash 0.7s linear infinite;
+}
+
+.lesson-live {
+  animation: lesson-pulse 1.8s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  :before,
+  :after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .lesson-draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media print {
+  header,
+  aside,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    color: #111 !important;
+    background: #fff !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "PlanVista Finance",
+      "hasCanvas": false,
+      "bodyTextLen": 67,
+      "bodyTextHash": "9c95f5ef9a8d8345979dd0357aa6cbf3c1b74e4b424a5de32e3280f92db32563",
+      "bodyTextPrefix": "PlanVista Finance Bull market move NIFTY 50 last close green +0.",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "PlanVista Finance",
+      "hasCanvas": false,
+      "bodyTextLen": 67,
+      "bodyTextHash": "9c95f5ef9a8d8345979dd0357aa6cbf3c1b74e4b424a5de32e3280f92db32563",
+      "bodyTextPrefix": "PlanVista Finance Bull market move NIFTY 50 last close green +0.",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
